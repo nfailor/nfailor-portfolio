@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #04446e;
+}
+
+* {}
+
+
+body {
+    /* position: relative; */
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #FDF8F5;
+    color: var(--primary-color);
+}
+
+h1,
+h2 {
+    margin: 20px;
+}
+
+/* .text-right {
+    text-align: right;
+} */
+
+header {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 40px;
+}
+
+nav {
+    position: relative;
+    margin: -75px 0 0 0;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header,
+footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: var(--primary-color);
+}
+
+footer {
+    position: relative;
+    margin-top: 0;
+    bottom: 0;
+    /* border-bottom: 10px solid #4F4846; */
+    color: #FDF8F5;
+}
+
+.container1 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: green;
+}
+
+#about-me-header {
+    font-size: 32px;
+    padding: 20px;
+    /* width: 35%; */
+    text-align: center;
+    border-right: 2px solid var(--primary-color);
+}
+
+#photo {
+    position: relative;
+    margin: 50px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#about-me-text {
+    text-align: center;
+    /* float:right; */
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: red;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+}
+
+.container2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.container2 img {
+    
+}
+
+.card {
+    display: flex;
+    flex: 2 1 500px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 15px 1px grey;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#portfolio-header {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid var(--primary-color);
+}
+
+#horiseon-marketing {
+    background-image: url(../images/marketing-image.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#coding-intro {
+    background-image: url(../images/study-image.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#coming-soon {
+    background-image: url(../images/more-coming-soon.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    background-color: purple;
+    text-align: center;
+    height: 30vh;
+}
+
+.contact-me {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#contact-me-header {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.container3 ul {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.container3 ul li {
+    display: flex;
+    margin-left: 10px;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.container3 ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 992px) {
+    .container1, nav, .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .container2 {
+        width: 100%;
+        height: 100%;
+    }
+
+    header {
+        background: #772014;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section, nav {
+        flex-direction: column;
+    }
+
+    header {
+        background: #8ca308;
+    }
+}
