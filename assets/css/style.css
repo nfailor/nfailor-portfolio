@@ -2,11 +2,11 @@
     --primary-color: #04446e;
 }
 
-* {}
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -19,10 +19,6 @@ h1,
 h2 {
     margin: 20px;
 }
-
-/* .text-right {
-    text-align: right;
-} */
 
 header {
     flex-wrap: wrap;
@@ -64,15 +60,12 @@ footer {
     position: relative;
     margin-top: 0;
     bottom: 0;
-    /* border-bottom: 10px solid #4F4846; */
     color: #FDF8F5;
 }
 
 .container1 {
     display: flex;
-    /* flex-wrap: wrap; */
     width: 100%;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: green;
 }
@@ -80,7 +73,6 @@ footer {
 #about-me-header {
     font-size: 32px;
     padding: 20px;
-    /* width: 35%; */
     text-align: center;
     border-right: 2px solid var(--primary-color);
 }
@@ -116,17 +108,38 @@ footer {
     color: white;
 }
 
-.container2 img {
-    
-}
-
-.card {
+.card1 {
     display: flex;
+    flex-wrap: wrap;
     flex: 2 1 500px;
     justify-content: flex-end;
     align-items: flex-end;
     border: 1px solid black;
-    width: 300px;
+    width: 500px;
+    max-width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 15px 1px grey;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2 1 500px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 1px solid black;
+    width: 350px;
+    max-width: 350px;
     height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -154,21 +167,21 @@ footer {
 }
 
 #horiseon-marketing {
-    background-image: url(../images/marketing-image.jfif);
+    background-image: url("../images/marketing-image.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 #coding-intro {
-    background-image: url(../images/study-image.jfif);
+    background-image: url("../images/study-image.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 #coming-soon {
-    background-image: url(../images/more-coming-soon.jfif);
+    background-image: url("../images/more-coming-soon.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
