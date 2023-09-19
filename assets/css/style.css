@@ -2,6 +2,12 @@
     --primary-color: #04446e;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -50,7 +56,6 @@ nav ul li a {
 
 header,
 footer {
-    height: 60px;
     width: 100%;
     line-height: 60px;
     background-color: var(--primary-color);
@@ -67,7 +72,7 @@ footer {
     display: flex;
     width: 100%;
     align-items: center;
-    background-color: green;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 #about-me-header {
@@ -87,20 +92,17 @@ footer {
 
 #about-me-text {
     text-align: center;
-    /* float:right; */
+    padding: 5px;
 }
 
 .container2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
-    /* align-items: center; */
-    background-color: red;
-    /* text-align: center; */
+    border-bottom: 2px solid var(--primary-color);
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .container2 a {
@@ -192,7 +194,6 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    background-color: purple;
     text-align: center;
     height: 30vh;
 }
@@ -229,10 +230,29 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
-    .container1, nav, .container2 {
+    .container1 {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: #772014;
+    }
+    header div {
+        flex: 1 0 100%;
+        background-color: yellow;
+    }
+    header nav {
+        flex: 1 0 100%;
+        background-color: black;
     }
 
     .container2 {
@@ -240,17 +260,103 @@ footer {
         height: 100%;
     }
 
-    header {
-        background: #772014;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    section, nav {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container1 {
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
     }
 
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card1 {
+        flex: 1 0 70%;
+        min-height: 35vh;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 6px 15px 1px grey;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+
+    }
+
+    .card {
+        flex: 1 0 90%;
+        min-height: 35vh;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 6px 15px 1px grey;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+    }
+
+    .card, .card1 {
+        font-size: larger;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
     header {
+        display: flex;
+        flex-wrap: wrap;
         background: #8ca308;
+    }
+
+    header div {
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    header nav {
+        flex: 1 0 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        float: none;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul li {
+        padding: 2px;
+        margin: 2px;
     }
 }
